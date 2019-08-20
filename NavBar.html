@@ -1,0 +1,109 @@
+<html>
+<head>
+	<script>
+		var dropMenu = true;
+		function dropMenuShow(){
+			dropMenu = !dropMenu;
+			console.log(dropMenu);
+			var elements = document.getElementsByClassName("droppedButtons");
+			dropMenu ? elements[0].style.display = "block": elements[0].style.display = "none";
+		}
+	</script>
+</head>
+<body>
+	<div class="navBar">
+		<div class="navButton">
+			<div class= "buttonInline">Home</div>
+		</div>
+		<div class="navButton">
+			<div class= "buttonInline">Contact</div>
+		</div>
+		<div class="navButton">
+			<div class= "buttonInline">Login</div>
+		</div>	
+
+		<div class="dropDownComponent">
+			<div class="navButton dropDownButton">
+				<div class= "buttonInline">DropDown</div>
+			</div>
+			<div class="droppedButtons">
+				<div class="droppedButton">
+					<div class= "droppedButtonInline">Dropped1</div><hr>
+				</div>
+				<div class="droppedButton">
+					<div class= "droppedButtonInline">Dropped2</div><hr>
+				</div>
+				<div class="droppedButton">
+					<div class= "droppedButtonInline">Dropped3</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+</body>
+<style>
+
+	.droppedButton{
+		display: block;
+		margin: 0px 10px 0px 10px;
+		padding: 7px;
+		color:white;
+		background-color: green;
+		width: fit-content;
+	}
+
+	.droppedButtons{
+		display:none;
+		text-align: -webkit-right;
+	}
+
+	.droppedButtonInline{
+		display:block;
+	}
+
+	.dropDownComponent{
+		display: inline;
+	}
+
+	.dropDownComponent:hover .droppedButtons{
+		display:block;
+	}
+
+
+	.buttonInline{
+		color:white;
+		background: green;	
+	}
+
+	.buttonInline:hover {
+		background: rgb(100,100,100);
+	}
+
+	.navButton:hover{
+		background: rgb(100,100,100);
+	}
+
+	.droppedButton{
+		background: rgb(100,100,100);
+	}
+
+	.navBar {
+		background-color: black;
+		text-align: end;
+		height: 40px;
+	}
+	.navButton{
+		display:inline-flex;
+		margin: 0px 10px 0px 10px;
+		padding: 10px 10px;
+		background-color: green;
+	}
+
+	span:hover{
+		border-width: thick;
+		border-color: blue;
+		background-color: green;
+		border: thick;
+	}
+</style>
+</html>
